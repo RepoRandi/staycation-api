@@ -43,7 +43,10 @@ booking : {
     bankId : [[_id : ObjectId]],
     proofPayment : string,
     bankFrom : string,
-    accountHolder : string
+    accountHolder : string,
+    imageUrl : string,
+    status : string
+    
 }
 
 member : {
