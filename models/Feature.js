@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const FeatureSchema = new mongoose.Schema({
+const featureSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -15,4 +15,4 @@ const FeatureSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Feature", FeatureSchema);
+module.exports = mongoose.model("Feature", featureSchema);
