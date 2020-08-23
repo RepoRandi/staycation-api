@@ -1,0 +1,12 @@
+category : {
+    name : string
+}
+
+item : {
+    name : string,
+    price : number,
+    image : string,
+    country : string,
+    city : string,
+    isPopular : boolean
+}
