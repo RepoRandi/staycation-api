@@ -34,24 +34,13 @@
 </a>
 
 <!-- Logout Modal-->
-<div
-  class="modal fade"
-  id="logoutModal"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-        <button
-          class="close"
-          type="button"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>
       </div>
@@ -68,4 +57,16 @@
   </div>
 </div>
 
-<%- include('add_modal.ejs') %> <%- include('../../partials/js.ejs') %>
+<%- include('add_modal.ejs') %>
+<%- include('edit_modal.ejs') %>
+<%- include('../../partials/js.ejs') %>
+
+<script>
+  $("#dataTable").on("click", ".button-update", function () {
+    let id = $(this).data('id');
+    let name = $(this).data('name');
+    $("#edit-modal").modal("show");
+    $('.id').val(id);
+    $('.name').val(name);
+  });
+</script>
