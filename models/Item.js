@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const { ObjectId } = mongoose.Schema;
 
-const ItemSchema = new mongoose.Schema({
+const itemSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -46,4 +46,4 @@ const ItemSchema = new mongoose.Schema({
   ],
 });
 
-module.exports = mongoose.model("Item", ItemSchema);
+module.exports = mongoose.model("Item", itemSchema);
