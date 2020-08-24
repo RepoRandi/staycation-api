@@ -8,15 +8,20 @@
   <div id="content-wrapper" class="d-flex flex-column">
     <!-- Main Content -->
     <div id="content">
+
       <%- include('../../partials/navbar.ejs') %>
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
+
+        <%- include('../../partials/message.ejs') %>
+
         <!-- Page Heading -->
         <h1 class="h3 mb-4 text-gray-800">Category</h1>
         <!-- End Heading -->
 
         <%- include('table_category.ejs') %>
+
       </div>
       <!-- /.container-fluid -->
     </div>
