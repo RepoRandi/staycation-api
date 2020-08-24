@@ -18,6 +18,14 @@ module.exports = {
     res.redirect("/admin/category");
   },
 
+  editCategory: async (req, res) => {
+    const { id, name } = req.body;
+    const category = await Category.findOne({ _id: id });
+
+    console.log(category);
+    // res.redirect("/admin/category");
+  },
+
   viewBank: (req, res) => {
     res.render("admin/bank/view_bank");
   },
