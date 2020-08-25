@@ -1,0 +1,46 @@
+<div class="tab-pane fade show active" id="show-feature" role="tabpanel" aria-labelledby="home-tab">
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4 mt-1">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-5">
+          <form action="/admin/bank" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" name="name" placeholder="Enter name" required />
+            </div>
+            <div class="form-group">
+              <label for="name">QTY</label>
+              <input type="number" class="form-control" name="qty" placeholder="Enter qty" required />
+            </div>
+            <div class="form-group">
+              <label for="name">Image</label>
+              <input type="file" class="form-control" name="image" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
+        </div>
+        <div class="col-md-7">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Name</th>
+                  <th>QTY</th>
+                  <th>Image URL</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End DataTales Example -->
+</div>
