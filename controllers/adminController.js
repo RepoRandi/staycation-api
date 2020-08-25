@@ -154,10 +154,18 @@ module.exports = {
     }
   },
 
-  viewItem: (req, res) => {
-    res.render('admin/item/view_item', {
-      title: 'Staycation | Item'
-    });
+  viewItem: async (req, res) => {
+    try {
+      const category = await Category.find();
+      res.render('admin/item/view_item', {
+        title: 'Staycation | Item',
+        category
+      });
+    } catch (error) {
+      req.flash('alertMessage', `${error.message}`);
+      req.flash('alertStatus', 'danger');
+      res.redirect('/admin/item');
+    }
   },
 
   viewBooking: (req, res) => {
