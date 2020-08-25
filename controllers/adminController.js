@@ -191,7 +191,7 @@ module.exports = {
         category.itemId.push({ _id: item._id });
         await category.save();
         for (let i = 0; i < req.files.length; i++) {
-          const imageSave = await Image.create({ imageUrl: `images/${req.files.name}` });
+          const imageSave = await Image.create({ imageUrl: `images/${req.files[i].filename}` });
           item.imageId.push({ _id: imageSave._id });
           await item.save();
         }
