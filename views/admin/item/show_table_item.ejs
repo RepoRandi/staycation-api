@@ -14,6 +14,29 @@
               <th>Action</th>
             </tr>
           </thead>
+          <tbody>
+            <% for(let i = 0; i < item.length; i++){ %>
+            <tr>
+              <td><%= i + 1 %></td>
+              <td><%= item[i].title %></td>
+              <td>$ <%= item[i].price %></td>
+              <td><%= item[i].country %></td>
+              <td><%= item[i].city %></td>
+              <td>
+                <form action="/admin/item/<%= item[i].id %>?_method=DELETE" method="POST">
+                  <a href="#" class="btn btn-outline-success btn-circle btn-sm "><i class="fas fa-image"></i></a>
+                  <a href="javascript:void()" type="button"
+                    class="btn btn-outline-primary btn-circle btn-sm button-update" data-id="<%= item[i].id %>"
+                    data-name="<%= item[i].name %>"><i class="fas fa-edit"></i></a>
+                  <button type="submit" class="btn btn-outline-danger btn-circle btn-sm"><i
+                      class="fas fa-trash"></i></button>
+                  <a href="#" class="btn btn-outline-warning btn-circle btn-sm "><i class="fas fa-plus"></i></a>
+                </form>
+                </>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
         </table>
       </div>
     </div>
