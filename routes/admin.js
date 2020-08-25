@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const adminController = require("../controllers/adminController");
-const { upload } = require('../middlewares/multer');
+const { upload, uploadMultiple } = require('../middlewares/multer');
 
 router.get("/dashboard", adminController.viewDashboard);
 //!  endpoint category
