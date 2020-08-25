@@ -15,7 +15,7 @@ router.put("/bank", upload, adminController.editBank);
 router.delete("/bank/:id", adminController.deleteBank);
 //!  endpoint Item
 router.get("/item", adminController.viewItem);
-router.post("/item", adminController.addItem);
+router.post("/item", uploadMultiple, adminController.addItem);
 
 
 
