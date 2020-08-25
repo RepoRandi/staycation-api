@@ -46,7 +46,18 @@
         <div class="tab-content" id="myTabContent">
           <%- include('show_image_item.ejs') %>
         </div>
+        <% } else { %>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#edit-item" role="tab" aria-controls="home"
+              aria-selected="true">Edit Item</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <%- include('edit_item.ejs') %>
+        </div>
         <% } %>
+
       </div>
       <!-- /.container-fluid -->
     </div>

@@ -26,9 +26,8 @@
                 <form action="/admin/item/<%= item[i].id %>?_method=DELETE" method="POST">
                   <a href="/admin/item/show-image/<%= item[i].id %>"
                     class="btn btn-outline-success btn-circle btn-sm "><i class="fas fa-image"></i></a>
-                  <a href="javascript:void()" type="button"
-                    class="btn btn-outline-primary btn-circle btn-sm button-update" data-id="<%= item[i].id %>"
-                    data-name="<%= item[i].name %>"><i class="fas fa-edit"></i></a>
+                  <a href="/admin/item/<%= item[i].id %>" class="btn btn-outline-primary btn-circle btn-sm "><i
+                      class="fas fa-edit"></i></a>
                   <button type="submit" class="btn btn-outline-danger btn-circle btn-sm"><i
                       class="fas fa-trash"></i></button>
                   <a href="#" class="btn btn-outline-warning btn-circle btn-sm "><i class="fas fa-plus"></i></a>
