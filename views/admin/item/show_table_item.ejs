@@ -23,7 +23,7 @@
               <td><%= item[i].country %></td>
               <td><%= item[i].city %></td>
               <td>
-                <form action="/admin/item/<%= item[i].id %>?_method=DELETE" method="POST">
+                <form action="/admin/item/<%= item[i].id %>/delete?_method=DELETE" method="POST">
                   <a href="/admin/item/show-image/<%= item[i].id %>"
                     class="btn btn-outline-success btn-circle btn-sm "><i class="fas fa-image"></i></a>
                   <a href="/admin/item/<%= item[i].id %>" class="btn btn-outline-primary btn-circle btn-sm "><i
