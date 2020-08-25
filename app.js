@@ -17,7 +17,6 @@ mongoose.connect("mongodb://localhost:27017/db_staycation", {
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-
 //!  router admin
 const adminRouter = require("./routes/admin");
 
