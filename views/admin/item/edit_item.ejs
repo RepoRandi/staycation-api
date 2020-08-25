@@ -1,7 +1,7 @@
 <div class="tab-pane fade show active" id="edit-item" role="tabpanel" aria-labelledby="profile-tab">
   <div class="card shadow mb-4 mt-1">
     <div class="card-body">
-      <form action="/admin/item" method="POST" enctype="multipart/form-data">
+      <form action="/admin/item/<%= item.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="form-group">
           <label for="name">Title</label>
           <input type="text" class="form-control" name="title" value="<%= item.title %>" placeholder="Enter title"
@@ -20,7 +20,7 @@
         <div class="form-group">
           <label for="name">Category</label>
           <select class="form-control" name="categoryId">
-            <option value="<%= item.categoryId.name %>">--- <%= item.categoryId.name %> ---</option>
+            <option value="<%= item.categoryId._id %>">--- <%= item.categoryId.name %> ---</option>
             <% for(let i = 0; i < category.length; i++) { %>
             <option value="<%= category[i].id %>"><%= category[i].name %></option>
             <% } %>
