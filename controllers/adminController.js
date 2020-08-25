@@ -158,15 +158,18 @@ module.exports = {
 
   viewItem: async (req, res) => {
     try {
+      const item = await Item.find()
+        .populate({ path: 'imageId', select: 'id imageUrl' })
+        .populate({ path: 'categoryId', select: 'id name' });
       const category = await Category.find();
-      const bank = await Bank.find()
       const alertMessage = req.flash('alertMessage');
       const alertStatus = req.flash('alertStatus');
       const alert = { message: alertMessage, status: alertStatus };
       res.render('admin/item/view_item', {
         title: 'Staycation | Item',
         category,
-        alert
+        alert,
+        item
       });
     } catch (error) {
       req.flash('alertMessage', `${error.message}`);
