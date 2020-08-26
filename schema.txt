@@ -21,14 +21,16 @@ item : {
 feature : {
     name : string,
     qty : number,
-    imageUrl: string
+    imageUrl: string,
+    itemId : [{_id : ObjectId}]
 }
 
 activity : {
     name : string,
     type : string,
     imageUrl : string,
-    isPopular : boolean
+    isPopular : boolean,
+    itemId : [{_id : ObjectId}]
 }
 
 booking : {
