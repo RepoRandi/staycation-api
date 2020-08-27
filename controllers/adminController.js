@@ -44,7 +44,6 @@ module.exports = {
         req.flash('alertStatus', 'danger');
         res.redirect('/admin/signin');
       }
-
       req.session.user = {
         id: user.id,
         username: user.username
