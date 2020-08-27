@@ -63,7 +63,6 @@ module.exports = {
 
   viewDashboard: (req, res) => {
     try {
-
       res.render('admin/dashboard/view_dashboard', {
         title: 'Staycation | Dashboard',
         user: req.session.user
