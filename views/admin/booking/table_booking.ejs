@@ -7,12 +7,7 @@
   </div>
   <div class="card-body">
     <div class="table-responsive">
-      <table
-        class="table table-bordered"
-        id="dataTable"
-        width="100%"
-        cellspacing="0"
-      >
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
             <th>No</th>
@@ -24,6 +19,23 @@
             <th>Action</th>
           </tr>
         </thead>
+        <tbody>
+          <% for(let i = 0; i < booking.length; i++){ %>
+          <tr>
+            <td><%= i + 1 %></td>
+            <td><%= booking[i].bookingStartDate.toLocaleString().split(',')[0] %> s/d
+              <%= booking[i].bookingEndDate.toLocaleString().split(',')[0] %>
+            </td>
+            <td><%= booking[i].itemId.title %></td>
+            <td><%= booking[i].memberId.firstName %></td>
+            <td><%= booking[i].bankId.nameBank %></td>
+            <td><%= booking[i].payments.status %></td>
+            <td>
+              <a href="#" class="btn btn-outline-primary btn-circle btn-sm button-update"><i class="fas fa-eye"></i></a>
+            </td>
+          </tr>
+          <% } %>
+        </tbody>
       </table>
     </div>
   </div>
