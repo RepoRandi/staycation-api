@@ -4,6 +4,7 @@ const Traveler = require('../models/Booking');
 
 
 module.exports = {
+
   landingPage: async (req, res) => {
     try {
       const mostPicked = await Item.find()
@@ -14,6 +15,7 @@ module.exports = {
       const traveler = await Traveler.find();
       const treasure = await Treasure.find();
       const city = await Item.find();
+
       res.status(200).json({
         hero: {
           travelers: traveler.length,
