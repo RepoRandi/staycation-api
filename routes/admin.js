@@ -27,14 +27,18 @@ router.put("/item/:id", uploadMultiple, adminController.editItem);
 router.delete("/item/:id/delete", adminController.deleteItem);
 //!  endpoint detail Item
 router.get("/item/show-detail-item/:itemId", adminController.viewDetailItem);
+//!  endpoint detail Item feature
 router.post("/item/add/feature", upload, adminController.addFeature);
 router.put("/item/update/feature", upload, adminController.editFeature);
 router.delete("/item/:itemId/feature/:id", adminController.deleteFeature);
-
+//!  endpoint detail activity
 router.post("/item/add/activity", upload, adminController.addActivity);
 router.put("/item/update/activity", upload, adminController.editActivity);
 router.delete("/item/:itemId/activity/:id", adminController.deleteActivity);
-
+//!  endpoint booking
 router.get("/booking", adminController.viewBooking);
+//!  endpoint detail booking
+router.get("/booking/:id", adminController.showDetailBooking);
+
 
 module.exports = router;
