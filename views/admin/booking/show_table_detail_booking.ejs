@@ -8,10 +8,12 @@
       <div class="col-md-4">
         <img src="http://localhost:3000/<%= booking.payments.proofPayment %>" alt="image"
           style="width:100%; display:block;">
+
+        <% if(booking.payments.status == 'Proses') { %>
         <div class="card-footer py-3">
           <div class="row">
             <div class="col-8">
-              <form action="/admin/bank" method="POST">
+              <form action="/admin/booking/<%= booking.id %>/confirmation?_method=PUT" method="POST">
                 <button type="submit" class="btn btn-info btn-sm">
                   <i class="fas fa-check"></i>
                   Confirmation
@@ -19,7 +21,7 @@
               </form>
             </div>
             <div class="col-auto">
-              <form action="/admin/bank" method="POST">
+              <form action="/admin/booking/<%= booking.id %>/reject?_method=PUT" method="POST">
                 <button type="submit" class="btn btn-danger btn-sm">
                   <i class="fas fa-times"></i>
                   Reject
@@ -28,7 +30,9 @@
             </div>
           </div>
         </div>
+        <% } %>
       </div>
+
       <div class="col-md-8">
         <div class="table-responsive">
           <table class="table table-bordered" id="dataTableActivity" width="100%" cellspacing="0">
