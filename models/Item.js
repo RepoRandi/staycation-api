@@ -29,7 +29,7 @@ const itemSchema = new mongoose.Schema({
   },
   unit: {
     type: String,
-    default: 'night'
+    default: 'Night'
   },
   categoryId: {
     type: ObjectId,
