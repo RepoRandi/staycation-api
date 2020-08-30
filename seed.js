@@ -2,7 +2,7 @@ var seeder = require('mongoose-seed');
 var mongoose = require('mongoose');
 
 // Connect to MongoDB via Mongoose
-seeder.connect('mongodb://127.0.0.1:27017/db_staycation', {
+seeder.connect('mongodb+srv://randi:rama0809@cluster0.hjb1s.mongodb.net/db_staycation?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: true,
@@ -589,7 +589,7 @@ var data = [
         price: 20,
         sumBooking: 14,
         country: 'Indonesia',
-        city: 'Bandung',
+        city: 'Banyuwangi',
         isPopular: false,
         description: 'Minimal techno is a minimalist subgenre of techno music. It is characterized by a stripped-down aesthetic that exploits the use of repetition and understated development. Minimal techno is thought to have been originally developed in the early 1990s by Detroit-based producers Robert Hood and Daniel Bell.',
         unit: 'night',
@@ -981,8 +981,8 @@ var data = [
       },
       {
         _id: mongoose.Types.ObjectId('5e96cbe292b97300fc90bb08'),
-        name: 'Labour and Wait',
-        type: 'Shopping',
+        name: 'Snorkeling',
+        type: 'beach',
         imageUrl: 'images/activity-4.png',
         itemId: mongoose.Types.ObjectId('5e96cbe292b97300fc902223'),
       }
