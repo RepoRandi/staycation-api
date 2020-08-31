@@ -94,7 +94,7 @@ var data = [
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902222"),
         title: "Night Town",
-        price: 12,
+        price: 25,
         sumBooking: 1,
         country: "Indonesia",
         city: "Malang",
@@ -141,7 +141,7 @@ var data = [
         // done
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902223"),
         title: "Seattle Rain",
-        price: 20,
+        price: 40,
         sumBooking: 2,
         country: "Indonesia",
         city: "Batu",
@@ -188,7 +188,7 @@ var data = [
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902224"),
         title: "Atria",
-        price: 20,
+        price: 50,
         sumBooking: 3,
         country: "Indonesia",
         city: "Surabaya",
@@ -282,7 +282,7 @@ var data = [
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902226"),
         title: "Green Park",
-        price: 20,
+        price: 55,
         sumBooking: 5,
         country: "Indonesia",
         city: "Batu",
@@ -329,7 +329,7 @@ var data = [
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902227"),
         title: "Castle",
-        price: 20,
+        price: 30,
         sumBooking: 6,
         country: "Indonesia",
         city: "Banyuwangi",
@@ -376,7 +376,7 @@ var data = [
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902228"),
         title: "Silver Rain",
-        price: 20,
+        price: 25,
         sumBooking: 7,
         country: "Indonesia",
         city: "Kediri",
@@ -423,7 +423,7 @@ var data = [
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902229"),
         title: "Cashville",
-        price: 20,
+        price: 40,
         sumBooking: 8,
         country: "Indonesia",
         city: "Lumajang",
@@ -470,7 +470,7 @@ var data = [
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902230"),
         title: "Vrince",
-        price: 20,
+        price: 60,
         sumBooking: 9,
         country: "Indonesia",
         city: "Surabaya",
@@ -517,7 +517,7 @@ var data = [
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902231"),
         title: "Ibis",
-        price: 20,
+        price: 35,
         sumBooking: 11,
         country: "Indonesia",
         city: "Malang",
@@ -564,7 +564,7 @@ var data = [
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902232"),
         title: "Minimal",
-        price: 20,
+        price: 65,
         sumBooking: 13,
         country: "Indonesia",
         city: "Bandung",
@@ -611,7 +611,7 @@ var data = [
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902233"),
         title: "Stays Home",
-        price: 20,
+        price: 40,
         sumBooking: 14,
         country: "Indonesia",
         city: "Banyuwangi",
@@ -1027,10 +1027,10 @@ var data = [
         itemId: {
           _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902222"),
           title: "Village Putra Randi",
-          price: 6,
+          price: 20,
           duration: 2,
         },
-        total: 12,
+        total: 40,
         memberId: mongoose.Types.ObjectId("5e96cbe292b97300fc903333"),
         bankId: mongoose.Types.ObjectId("5e96cbe292b97300fc903323"),
         payments: {
@@ -1071,14 +1071,14 @@ var data = [
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc903322"),
         nameBank: "BCA",
         nomorRekening: "089898",
-        name: "akbar",
+        name: "Akbar",
         imageUrl: "images/logo bca.png",
       },
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc903323"),
         nameBank: "Mandiri",
         nomorRekening: "878678",
-        name: "akbar",
+        name: "Akbar",
         imageUrl: "images/logo mandiri.png",
       },
     ],
