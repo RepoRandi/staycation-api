@@ -6,9 +6,8 @@ var logger = require("morgan");
 const methodOverrid = require('method-override');
 const session = require('express-session');
 const flash = require('connect-flash');
-//! use cors
 const cors = require('cors');
-app.use(cors());
+
 //! import mongoose
 const mongoose = require("mongoose");
 mongoose.connect("mongodb+srv://randi:rama0809@cluster0.hjb1s.mongodb.net/db_staycation?retryWrites=true&w=majority", {
@@ -47,6 +46,9 @@ app.use(
   "/sb-admin-2",
   express.static(path.join(__dirname, "node_modules/startbootstrap-sb-admin-2"))
 );
+
+//! use cors
+app.use(cors());
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
